@@ -19,6 +19,7 @@ images/*
 user/accounts/*
 !user/accounts/.*
 user/localhost/config/security.yaml
+user/data/*
 
 # OS Generated
 .DS_Store*
