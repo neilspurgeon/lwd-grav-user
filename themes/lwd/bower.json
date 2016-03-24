@@ -1,0 +1,21 @@
+{
+  "name": "lwd",
+  "homepage": "https://github.com/neilspurgeon/lwd-grav-portfolio",
+  "authors": [
+    "Neil <neilspurgeon@gmail.com>"
+  ],
+  "description": "Modern side scrolling portfolio theme for GRAV",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "^3.9.1"
+  }
+}

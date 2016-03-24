@@ -1,0 +1,91 @@
+.work-grid-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.work-grid {
+  margin: 0 auto;
+  width: calc(100% + 20px);
+}
+
+/* clear fix */
+.work-grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-bottom: 70%;
+  background-color: gray;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  @media (min-width: $md-break) {
+    width: calc(50% - 20px);
+    padding-bottom: 35%;
+  }
+  @media (min-width: $lg-break) {
+    width: calc(20% - 20px);
+    padding-bottom: 12%;
+  }
+}
+
+.grid-project-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1em;
+  background-color: rgba(255,255,255,.65);
+  font-size: 12px;
+  color: $secondary-color;
+  transition: .2s ease;
+  @media (min-width: $md-break) {
+    transform: translateY(3.2em);
+  }
+  .client {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-right: .5em;
+  }
+  .title {
+
+  }
+}
+
+.grid-item:hover {
+  .grid-project-title {
+    @media (min-width: $md-break) {
+      transform: translateY(0);
+    }
+  }
+}
+
+.sm-portrait {
+  width: 100%;
+  padding-bottom: 100%;
+  @media (min-width: $md-break) {
+    width: calc(50% - 20px);
+    padding-bottom: 50%;
+  }
+  @media (min-width: $lg-break) {
+    width: calc(20% - 20px);
+    padding-bottom: 20%;
+  }
+}
+
+.lg-landscape {
+  width: 100%;
+  padding-bottom: 70%;
+  @media (min-width: $md-break) {
+    width: calc(50% - 20px);
+    padding-bottom: 35%;
+  }
+  @media (min-width: $lg-break) {
+    width: calc(40% - 20px);
+    padding-bottom: 24%;
+  }
+}

@@ -1,0 +1,32 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  {{ page.content }}
+
+  <div class="work-grid-container">
+    <div class="work-grid">
+      {% for p in page.find('/work').children %}
+        <a href="{{ p.url }}">
+          
+          {% set thumbnail = p.header.thumbnail %}
+
+          
+          {# <div class="grid-item {{ p.header.thumbnail_size }}" style="background-image:url('{{ p.url ~ '/' ~ thumbnail }}')"> #}
+
+          <div class="grid-item {{ p.header.thumbnail_size }}" >
+
+          <img src="{{ p.url ~ '/' ~ thumbnail }}" style="position: absolute; width: 100%;">        
+            
+            <div class="grid-project-title">
+              <span class="client">{{ p.header.client }}</span>
+              <span class="title">{{ p.title }}</span>
+            </div>
+          </div>
+          
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+

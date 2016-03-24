@@ -1,0 +1,11 @@
+email: neilspurgeon@gmail.com
+fullname: 'Neil Spurgeon'
+title: Developer
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$8SnLuAwmoUx/qZ9lz6Q/JeKJ.hKPUWkuLuB8AYH5X409LhmIv470S

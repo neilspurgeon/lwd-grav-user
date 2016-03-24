@@ -1,0 +1,58 @@
+{% extends 'partials/base.html.twig' %}
+
+  {% block content %}
+  <div class="project-container">
+
+    <div class="project-info">
+      <h1 class="client">{{ page.header.client }}</h1>
+      <h2 class="title">{{ page.title }}</h2>
+      {{ page.content }}
+      
+      {% if page.header.related_work %}
+        <ul>
+          <h3>Related Work</h3>
+          {% for p in page.header.related_work %}
+            <li><a class="styled-link" href="{{ base_url ~ p.url }}">{{ p.title }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    
+    </div>
+    
+    <div class="horizontal-scroll">
+      {% set img_count = 0 %}
+
+      <section class="images">
+        {% for image in page.media.images %}
+          {% set img_count = img_count + 1 %}
+          <a class="project-img" id="{{ 'image-' ~ img_count }}" rel="lightbox" href="{{ image.url }}">
+              {{ image.html() }}
+          </a>
+        {% endfor %}
+
+        <!-- Pagination -->
+        {% if page.nextSibling.url %}
+            <div class="project-img project-img-end">
+              <a href="{{ page.nextSibling.url }}">{{ page.nextSibling.title }}</a>
+            </div>
+        {% else %}
+        <div class="project-img project-img-end">
+          <h1>Thanks for looking!</h1>
+          <p>Feel free to contact me at 530 318 4337 or hello@itsleewilliams.com</p>
+          <p>or visit my <a href="/info">about me</a> section if you'd like to know some more personal details.</p>
+        </div>
+        {% endif %}
+
+      </section>
+
+      <div class="pagination">
+        {% for i in 1.. img_count %}
+          <a href="{{ '#image-' ~ i }}">{{ i }}</a>
+        {% endfor %}
+      </div>
+
+    </div>
+
+
+</div>
+  {% endblock %}

@@ -1,0 +1,37 @@
+<div class="nav-bg">
+  <nav class="main-nav-container">
+    <a class="left-nav" href="/">
+      <h1 class="site-title">{{ site.title }}</h1>
+    </a>
+
+    <ul class="right-nav">
+      {% for p in pages.children %}
+      <li>
+        <a href="{{p.url}}">
+          <h2>{{ p.title }}</h2>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
+
+<script>
+ $(document).ready(function() {
+  path = window.location.pathname;
+  currentLink = $('a[href$="' + path + '"]');
+
+  console.log(currentLink)
+
+  if (currentLink[0]) {
+    currentLink.addClass('active');
+    console.log('if')
+  } else {
+    $('a[href$="/lee_williams_portfolio"]').addClass('active')
+    console.log('else')
+  }
+
+
+
+ })
+</script>

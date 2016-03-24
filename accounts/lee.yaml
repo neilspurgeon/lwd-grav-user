@@ -1,0 +1,11 @@
+email: leel@itsleewilliams.com
+fullname: 'Lee Williams'
+title: 'Site Administrator'
+access:
+  admin:
+    login: true
+    super: true
+state: enabled
+language: en
+authenticated: true
+hashed_password: $2y$10$rLDwzVC5hYdRi4/qNjsL3eRkIwkWzJF9y1LO4kCMiuEvDekW3D0l6

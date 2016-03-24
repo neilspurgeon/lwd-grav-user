@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Maison';
+  src: url('../assets/fonts/MaisonNeueWEB-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal; 
+}
+
+@font-face {
+  font-family: 'Maison';
+  src: url('../assets/fonts/MaisonNeueWEB-Demi.woff') format('woff');
+  font-weight: bold;
+  font-style: normal; 
+}
+
+$font-stack: 'Maison', Helvetica, sans-serif;
+$line-height: 1.4;
+$base-font-weight: normal;
+
+/* $rembase = 10px */
+html {
+  font-size: 13px;
+  line-height: $line-height;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 1.0rem; /* 10 ÷ $rembase */
+}
+
+h1,
+h2 {
+  font-size: 1.1rem; /* 11 ÷ $rembase */
+  font-weight: bold;
+}
+
+h3,
+h4 {
+  font-size: 1.0rem; /* 10 ÷ $rembase */
+  font-weight: bold;
+}

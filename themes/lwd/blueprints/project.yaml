@@ -1,0 +1,35 @@
+title: Project
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    header.client:
+      type: input
+      label: Enter client
+      required: false
+    header.thumbnail:
+      type: PageMediaSelect
+      label: Select thumbnail
+      required: true
+    header.thumbnail_size:
+      type: select
+      label: Select thumbnail size
+      default: 'Small Landscape'
+      options:
+        'sm-landscape' : 'Small Landscape'
+        'sm-portrait' : 'Small Portrait'
+        'lg-landscape' : 'Large Landscape'
+    header.related_work:
+      name: Related work
+      type: list
+      label: Related work
+
+      fields:
+        .url:
+          type: pages
+          label: Select page
+        .title:
+          type: input
+          label: Enter title

@@ -1,0 +1,11 @@
+name: LWD
+version: 1.0.0
+description: "Modern horizontal scrolling portfolio theme"
+author:
+  name: Neil Spurgeon
+  email: neilspurgeon@gmail.com
+  url: neilspurgeon.com
+homepage: https://github.com/neilspurgeon/lwd-grav-portfolio
+keywords: horizontal, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/neilspurgeon/lwd-grav-portfolio/issues
+license: MIT

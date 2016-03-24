@@ -1,0 +1,38 @@
+@import 'colors';
+
+// Variables
+$sidebar-width: 20vw;
+$gutter-width: 20px;
+
+$sm-break: 0px;
+$md-break: 600px;
+$lg-break: 1000px;
+
+
+// Global Styling
+* { box-sizing: border-box; } 
+
+html {background-color: $background-color;}
+
+body {
+  max-width: 1400px;
+  margin:  .5em 20px 0;
+  color: $primary-color;
+  @media (min-width: 1440px) {
+    margin: .5em auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+a.styled-link {
+  transition: .3s ease;
+  border-bottom: 1px solid rgba(78,76,74,0);  
+}
+
+a.styled-link:hover {
+  border-bottom: 1px solid rgba(78,76,74,1);  
+}
